@@ -1,0 +1,54 @@
+CREATE DATABASE TextileIndustry;
+
+
+
+Use [TextileIndustry]
+Go
+CREATE TABLE Manager
+(
+MId int not null identity(1001,1) primary key,
+MName varchar(30) not null,
+MUserName varchar(20) not null,
+MPassword varchar(25) not null,
+MEmail varchar(30) not null,
+MSalary float not null,
+CurrentAddress varchar(55),
+Mobile varchar(15)
+);
+
+
+
+
+Use [TextileIndustry]
+Go
+CREATE TABLE Products
+(
+ProID int not null identity(101,1) primary key,
+ProName varchar(25) not null,
+FibreCost float not null,
+YarnCost float not null,
+FabricsCost float not null,
+DyesCost float not null,
+PackCost float not null,
+UnitPrice float not null,
+SellPrice float not null,
+PerProfit float not null,
+);
+
+
+
+USE [TextileIndustry]
+GO
+CREATE TABLE Deals
+(
+DealNumber int not null IDENTITY(1801,1) PRIMARY KEY,
+CompanyName varchar(40) not null,
+ProId int not null FOREIGN KEY REFERENCES Products(ProId),
+ProName varchar(35) not null,
+Quantity int not null,
+Bill float not null,
+DeliveryDate varchar(15) not null,
+DelivStatus varchar(15) not null,
+ProfitPerOrder float not null,
+MId int not null FOREIGN KEY REFERENCES Manager(MId)
+);
