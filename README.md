@@ -1,2 +1,4 @@
 # Textile_Industry_Management_System
-This is a NetBeans IDE based Java desktop application developed using Java swing &amp; Microsoft SQL Server 2017 Database.
+## ScreenShot
+
+![alt text](https://github.com/showrov-swe/Textile_Industry_Management_System/blob/master/AppsScreenShot.png)
